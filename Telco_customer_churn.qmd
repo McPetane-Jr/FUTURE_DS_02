@@ -5,10 +5,9 @@ format:
   html:
     embed-resources: true
     theme: cosmo
-    toc: true
   pdf: default
-execute:
-  echo: false
+toc: true
+echo: false
 jupyter: python3
 ---
 
@@ -39,7 +38,6 @@ grid_style = {'linestyle': '--', 'alpha': 0.8, 'zorder': 0, 'axis':'y'}
 df = pd.read_csv("WA_Fn-UseC_-Telco-Customer-Churn.csv")
 df.head() #First 5 rows of the dataset
 ```
-
 
 ### Information
 
@@ -109,6 +107,12 @@ df['SeniorCitizen'] = df['SeniorCitizen'].map({0: 'No', 1: 'Yes'})
 :::
 
 # Churn Analysis
+
+## Preview
+
+```{python}
+df.head()
+```
 
 ## Overall Churn Rate
 
@@ -210,7 +214,6 @@ plt.grid(True, **grid_style, linewidth=0.5)
 plt.tight_layout()
 #print(tenure_churn)
 plt.show()
-
 ```
 
 **Key observations:**
@@ -254,7 +257,6 @@ plt.grid(True, **grid_style, linewidth=0.5)
 plt.tight_layout()
 #print(total_charges_churn) 
 plt.show()
-
 ```
 
 **Key Observations:**
@@ -332,7 +334,6 @@ plt.show()
 - Survey both DSL and fiber opitcs to compare customers' feedback on both services
 - Explore potential improvements to both the fiber optic and DSL service, such as enhancing network infrastructure, offering better customer support, or providing incentives to retain customers who are at risk of churning due to dissatisfaction with their internet service.
 - Guide customers to the RIGHT service for THEIR needs (which service is for what type of user) not just the most expensive or fastest option.
-
 
 ```{python}
 #==========Pricing of Internet Services===============
